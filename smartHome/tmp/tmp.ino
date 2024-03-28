@@ -15,13 +15,13 @@ void loop() {
   buttonState = digitalRead(2);
   if (buttonState == HIGH) {
     // PRESSED:
-    Serial.println("BUTTON ON");
-    digitalWrite(12, HIGH);
+    Serial.println("BUTTON OFF");
+    digitalWrite(12, LOW);
     //myStepper.setSpeed(20);
   } else {
     // NOT PRESSED
-    Serial.println("BUTTON OFF");
-    digitalWrite(12, LOW);
+    Serial.println("BUTTON ON");
+    digitalWrite(12, HIGH);
     //myStepper.setSpeed(1);
   }
   //myStepper.step(stepsPerRevolution);
